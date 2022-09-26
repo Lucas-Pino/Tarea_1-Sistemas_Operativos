@@ -19,7 +19,7 @@ int main() {
 
 
     pid_t repartidor1;
-//    pid_t repartidorB;
+    pid_t repartidor2;
     repartidor1=fork();
     if (repartidor1 < 0){ //Ocurrio un error
         printf("Fallo el fork child1");
@@ -33,16 +33,16 @@ int main() {
 
 
     else{
-//        repartidor2=fork();
-//        if (repartidor2 < 0){ //Ocurrio un error
-//            printf("Fallo el fork child 2");
-//            return 1;
-//        }
-//
-//
-//        else if (repartidor2==0){ /// PROCESO HIJO 2/////////////////
-//
-//        }
+        repartidor2=fork();
+        if (repartidor2 < 0){ //Ocurrio un error
+            printf("Fallo el fork child 2");
+            return 1;
+        }
+
+
+        else if (repartidor2==0){ /// PROCESO HIJO 2/////////////////
+
+        }
 
 
         //variables auxiliares
@@ -50,7 +50,7 @@ int main() {
         char *token;
 
         //lista enlazada de productos disponibles, cada nodo contiene una struct 'producto'
-        node *listaProductos;
+        node *listaProductos=NULL;
         initList(listaProductos);
 
         char *pedidos[MAXPEDIDOS];
@@ -149,5 +149,5 @@ int main() {
         return 0;
     }
 ///////////FIN DEL PROCESO PADRE///////////////
-
+    wait(NULL);
 }
