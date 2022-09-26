@@ -17,6 +17,7 @@ int main() {
     //CREANDO LOS PROCESOS HIJOS
     // EL CAJERO SERA EL PROCESO PRINCIPAL
 
+
     pid_t repartidor1;
 //    pid_t repartidorB;
     repartidor1=fork();
