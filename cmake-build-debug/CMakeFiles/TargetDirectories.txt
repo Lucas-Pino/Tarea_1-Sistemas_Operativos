@@ -1,0 +1,3 @@
+/Users/lucas/School/Sistemas operativos/Tarea_1B/cmake-build-debug/CMakeFiles/Tarea_1.dir
+/Users/lucas/School/Sistemas operativos/Tarea_1B/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/lucas/School/Sistemas operativos/Tarea_1B/cmake-build-debug/CMakeFiles/rebuild_cache.dir
