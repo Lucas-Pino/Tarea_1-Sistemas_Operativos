@@ -98,18 +98,24 @@ int main() {
     }
 
     pid_t child_a, child_b;
+    pid_t parentPid=getpid();
 
     child_a = fork();
 
     if (child_a == 0) {
-        /* Child A code */
+        printf("predicted PID: %d\n",parentPid+1);
+        printf("this is child_A PID: %d\n",getpid());
     } else {
         child_b = fork();
 
         if (child_b == 0) {
             /* Child B code */
+            printf("predicted PID: %d\n",parentPid+2);
+            printf("this is child_B PID: %d\n",getpid());
         } else {
             /* Parent Code */
+            printf("predicted PID: %d\n",parentPid);
+            printf("this is the PARENT PID: %d\n",getpid());
         }
     }
 
@@ -133,6 +139,7 @@ int main() {
 //
 
 // limpiando basura?
+    wait(NULL);
     fclose(productosFilePtr);
     fclose(pedidosFilePtr);
     free(listaProductos);
