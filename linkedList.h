@@ -23,3 +23,7 @@ typedef struct node {
 
 void initList(node* head);
 void push(node ** head, producto* val);
+int getId(node* head, char* productName);
+int getTime(node* head, char* productName);
+int getPrice(node* head, char* productName);
+char* getNextPedido(char** Pedidos, int n);
